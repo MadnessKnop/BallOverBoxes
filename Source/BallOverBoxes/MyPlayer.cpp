@@ -28,6 +28,12 @@ void AMyPlayer::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
 
+
+		if (Controller)
+		{
+			AddMovementInput(GetActorForwardVector(), 0.5f);
+		}
+	
 }
 
 // Called to bind functionality to input
@@ -40,13 +46,7 @@ void AMyPlayer::SetupPlayerInputComponent(class UInputComponent* InputComponent)
 }
 
 
-//void AMyPlayer::MoveForward(float amount)
-//{
-//	if (Controller && amount)
-//	{
-//		AddMovementInput(GetActorForwardVector(), amount);
-//	}
-//}
+
 
 void AMyPlayer::MoveRight(float amount)
 {

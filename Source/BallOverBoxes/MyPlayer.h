@@ -29,13 +29,14 @@ public:
 		float JumpHight;
 	UPROPERTY(EditAnywhere)
 		float Torque;
-
-	//void MoveForward(float amount);
+	UFUNCTION(BlueprintCallable, Category = "Movement")
 	void MoveRight(float amount);
+
 	bool IsAlive();
 	//bool InputLeftRight();
 	//bool IsJumping();
 	//bool IsFalling();
 	int32 GetDamage();
-	
+
 };
+

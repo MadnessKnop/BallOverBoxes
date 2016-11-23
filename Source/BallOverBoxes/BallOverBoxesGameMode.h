@@ -12,8 +12,14 @@ UCLASS()
 class BALLOVERBOXES_API ABallOverBoxesGameMode : public AGameMode
 {
 	GENERATED_BODY()
-	
-	
-	
-	
+
+		virtual void BeginPlay() override;
+public:
+	ABallOverBoxesGameMode();
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", Meta = (BlueprintProtected = "true"))
+		TSubclassOf<class UUserWidget> BPInterfacePlayerClass;
+
+	UPROPERTY()
+		class UUserWidget * CurrentWidget;
 };
