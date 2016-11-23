@@ -12,9 +12,9 @@ void ABallOverBoxesGameMode::BeginPlay()
 
 	AMyPlayer* MyCharacter = Cast<AMyPlayer>(UGameplayStatics::GetPlayerPawn(this, 0));
 
-	if (BPInterfacePlayerClass != nullptr)
+	if (BP_Interface_PlayerClass != nullptr)
 	{
-		CurrentWidget = CreateWidget<UUserWidget>(GetWorld(), BPInterfacePlayerClass);
+		CurrentWidget = CreateWidget<UUserWidget>(GetWorld(), BP_Interface_PlayerClass);
 
 		if (CurrentWidget != nullptr)
 		{
@@ -23,7 +23,7 @@ void ABallOverBoxesGameMode::BeginPlay()
 	}
 }
 
-ABallOverBoxesGameMode::ABallOverBoxesGameMode()
+ABallOverBoxesGameMode::ABallOverBoxesGameMode() : Super()
 {
 	HUDClass = AHUDInterface::StaticClass();
 }

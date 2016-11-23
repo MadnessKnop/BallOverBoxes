@@ -31,7 +31,7 @@ void AMyPlayer::Tick( float DeltaTime )
 
 		if (Controller)
 		{
-			AddMovementInput(GetActorForwardVector(), 0.5f);
+			AddMovementInput(GetActorForwardVector(), 0.25f);
 		}
 	
 }
