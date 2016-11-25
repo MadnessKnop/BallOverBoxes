@@ -3,14 +3,14 @@
 #include "BallOverBoxes.h"
 #include "BallOverBoxesGameMode.h"
 #include "HUDInterface.h"
-#include "MyPlayer.h"
+#include "BallPLayer.h"
 #include "Blueprint/UserWidget.h"
 
 void ABallOverBoxesGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	AMyPlayer* MyCharacter = Cast<AMyPlayer>(UGameplayStatics::GetPlayerPawn(this, 0));
+	//AMyPlayer* MyCharacter = Cast<AMyPlayer>(UGameplayStatics::GetPlayerPawn(this, 0));
 
 	if (BP_Interface_PlayerClass != nullptr)
 	{
@@ -26,4 +26,5 @@ void ABallOverBoxesGameMode::BeginPlay()
 ABallOverBoxesGameMode::ABallOverBoxesGameMode() : Super()
 {
 	HUDClass = AHUDInterface::StaticClass();
+	DefaultPawnClass = ABallPlayer::StaticClass();
 }
