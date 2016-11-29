@@ -28,40 +28,40 @@ public:
 	MyVector& operator/=(float S);
 	MyVector operator-(void);
 };
-inline MyVector& operator+(MyVector u, MyVector v)
+inline MyVector operator+(MyVector u, MyVector v)
 {
 	float X = u.X + v.X;
 	float Y = u.Y + v.Y;
 	float Z = u.Z + v.Z;
 	return MyVector(X, Y, Z);
 }
-inline MyVector& operator-(MyVector u, MyVector v)
+inline MyVector operator-(MyVector u, MyVector v)
 {
 	float X = u.X - v.X;
 	float Y = u.Y - v.Y;
 	float Z = u.Z - v.Z;
 	return MyVector(X, Y, Z);
 }
-inline MyVector&  operator^(MyVector u, MyVector v)
+inline MyVector  operator^(MyVector u, MyVector v)
 {
 	float X = ((u.Y * v.Z) - (u.Z * v.Y));
 	float Y = ((u.Z * v.X) - (u.X * v.Z));
 	float Z = ((u.X * v.Y) - (u.Y * v.X));
 	return MyVector(X, Y, Z);
 }
-inline float& operator*(MyVector u, MyVector v)
+inline float operator*(MyVector u, MyVector v)
 {
 	float DotProduct = ((u.X * v.X) + (u.Y * v.Y) + (u.Z * v.Z));
 	return DotProduct;
 }
-inline MyVector& operator*(MyVector u, float s)
+inline MyVector operator*(MyVector u, float s)
 {
 	float X = u.X * s;
 	float Y = u.Y * s;
 	float Z = u.Z * s;
 	return MyVector(X, Y, Z);
 }
-inline MyVector& operator/(MyVector u, float s)
+inline MyVector operator/(MyVector u, float s)
 {
 	float X = u.X / s;
 	float Y = u.Y / s;
