@@ -44,6 +44,6 @@ public:
 	}
 	FORCEINLINE class UCameraComponent* GetCamera() const
 	{
-		return Camera;
+		return Camera; 
 	}
 };
